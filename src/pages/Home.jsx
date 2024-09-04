@@ -16,11 +16,11 @@ function Home(){
         <div>
             {/* Section 1 */}
             <div className="relative mx-auto flex flex-col w-11/12 items-center
-            text-white justify-between max-w-maxContent">
+            justify-between gap-8 text-white max-w-maxContent">
 
                 <Link to={"/signup"}>
 
-                    <div className="group mt-16 p-1 mx-auto rounded-full bg-richblack-800 font-bold text-richblack-200 transition-all duration-200 hover:scale-95 w-fit">
+                    <div className="group mt-16 p-1 mx-auto rounded-full bg-richblack-800 font-bold text-richblack-200 transition-all duration-200 hover:scale-95 w-fit drop-shadow-[0_1.5px_rgba(255,255,255,0.25)] hover:drop-shadow-none">
                         <div className="flex flex-row items-center gap-2 rounded-full px-10 py-[5px] transition-all duration-200 group-hover:bg-richblack-900">
                             <p>Become an Instructor</p>
                             <FaArrowRight/>
@@ -34,7 +34,7 @@ function Home(){
                     <HighlightText text={"Coding Skills"}/>
                 </div>
 
-                <div className="mt-4 w-[905] text-center text-lg font-bold text-richblack-300">
+                <div className="mt-3 w-[90%] text-center text-lg font-bold text-richblack-300">
                     Become an Instructor Empower Your Future with Coding Skills With our online coding courses, you can learn at your own pace, from anywhere in the world, and get access to a wealth of resources, including hands-on projects, quizzes, and personalized feedback from instructors.
                 </div>
 
@@ -48,7 +48,7 @@ function Home(){
                     </CTAButton>
                 </div>
 
-                <div className="mx-3 my-12 shadow-[10px_-5px_50px_-5px] shadow-blue-200 w-[80%] flex justify-center">
+                <div className="mx-3 my-7 shadow-[10px_-5px_50px_-5px] shadow-blue-200 w-[80%] flex justify-center">
                     <video className="shadow-[20px_20px_rgba(255,255,255)]"
                     muted
                     loop
@@ -182,7 +182,6 @@ function Home(){
                 {/*Review slider here*/}
 
             </div>
-
 
             {/* Footer */}
             <Footer/>
