@@ -1,18 +1,15 @@
-import React from 'react'
-import Template from '../components/core/Auth/Template'
-import loginImag from "../assets/Images/login.webp"
+import loginImg from "../assets/Images/login.webp"
+import Template from "../components/core/Auth/Template"
 
-const Login = () => {
+function Login() {
   return (
-    <div>
-        <Template
-            title = "Welcome Back"
-            description = "Build skills for tody, tomorrow, and beyond."
-            description2 = "Eductaion to future-proof your career."
-            image = {loginImag}
-            formType = "login"
-        />
-    </div>
+    <Template
+      title="Welcome Back"
+      description1="Build skills for today, tomorrow, and beyond."
+      description2="Education to future-proof your career."
+      image={loginImg}
+      formType="login"
+    />
   )
 }
 

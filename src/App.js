@@ -2,6 +2,8 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import Navbar from "./components/Common/Navbar"
+import Login from './pages/Login';
+import Signup from './pages/Signup';
 
 function App() {
   return (
@@ -9,6 +11,22 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
+         <Route
+          path="login"
+          element={
+            // <OpenRoute>
+              <Login/>
+            // </OpenRoute>
+          }
+        />
+        <Route
+          path="signup"
+          element={
+            // <OpenRoute>
+              <Signup/>
+            // </OpenRoute>
+          }
+        />
       </Routes>
   </div>
   );
