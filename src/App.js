@@ -6,8 +6,8 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import OpenRoute from './components/core/Auth/OpenRoute';
 import ForgotPassword from './pages/ForgotPassword';
-import UpdatePassword from './pages/UpdatePassword';
 import VerifyEmail from './pages/VerifyEmail';
+import UpdatePassword from './pages/UpdatePassword';
 
 function App() {
   return (

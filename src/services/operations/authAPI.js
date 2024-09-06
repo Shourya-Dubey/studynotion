@@ -42,6 +42,7 @@ export function sendOtp(email, navigate) {
   }
 }
 
+
 export function signUp(
   accountType,
   firstName,
@@ -83,6 +84,7 @@ export function signUp(
   }
 }
 
+
 export function login(email, password, navigate) {
   return async (dispatch) => {
     const toastId = toast.loading("Loading...")
@@ -118,6 +120,7 @@ export function login(email, password, navigate) {
   }
 }
 
+
 export function getPasswordResetToken(email, setEmailSent) {
   return async (dispatch) => {
     const toastId = toast.loading("Loading...")
@@ -143,6 +146,7 @@ export function getPasswordResetToken(email, setEmailSent) {
     dispatch(setLoading(false))
   }
 }
+
 
 export function resetPassword(password, confirmPassword, token, navigate) {
   return async (dispatch) => {
@@ -171,6 +175,7 @@ export function resetPassword(password, confirmPassword, token, navigate) {
     dispatch(setLoading(false))
   }
 }
+
 
 export function logout(navigate) {
   return (dispatch) => {
