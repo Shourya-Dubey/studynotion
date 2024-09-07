@@ -109,7 +109,7 @@ function SignupForm() {
               value={firstName}
               onChange={handleOnChange}
               placeholder="Enter first name"
-              className="form-style w-full"
+              className="form-style w-full "
             />
           </label>
           <label>
