@@ -3,10 +3,11 @@ import { useSelector } from "react-redux"
 
 import CourseBuilderForm from "./CourseBuilder/CourseBuilderForm"
 import CourseInformationForm from "./Courseinformation/CourseInformationForm"
-// import PublishCourse from "./PublishCourse"
+import PublishCourse from "./PublishCourse"
 
 export default function RenderSteps() {
   const { step } = useSelector((state) => state.course)
+  {console.log(step)}
 
   const steps = [
     {
@@ -30,15 +31,15 @@ export default function RenderSteps() {
           <>
             <div
               className="flex flex-col items-center "
-              key={item.id}
-            >
+              key={item.id}>
+
               <button
                 className={`grid cursor-default aspect-square w-[34px] place-items-center rounded-full border-[1px] ${
                   step === item.id
                     ? "border-yellow-50 bg-yellow-900 text-yellow-50"
                     : "border-richblack-700 bg-richblack-800 text-richblack-300"
-                } ${step > item.id && "bg-yellow-50 text-yellow-50"}} `}
-              >
+                } ${step > item.id && "bg-yellow-50 text-yellow-50"}} `}>
+                
                 {step > item.id ? (
                   <FaCheck className="font-bold text-richblack-900" />
                 ) : (
@@ -62,7 +63,7 @@ export default function RenderSteps() {
 
       <div className="relative mb-16 flex w-full select-none justify-between">
         {steps.map((item) => (
-          <>
+      
             <div
               className="flex min-w-[130px] flex-col items-center gap-y-2"
               key={item.id}
@@ -77,7 +78,6 @@ export default function RenderSteps() {
               </p>
             </div>
             
-          </>
         ))}
       </div>
       {/* Render specific component based on current step */}

@@ -15,7 +15,8 @@ import { COURSE_STATUS } from "../../../../../utils/constants"
 import IconBtn from "../../../../Common/IconBtn"
 import Upload from "../Upload"
 import ChipInput from "./ChipInput"
-import RequirementsField from "./RequirementsField"
+import RequirementsField from "./RequirementField"
+
 
 export default function CourseInformationForm() {
   const {
