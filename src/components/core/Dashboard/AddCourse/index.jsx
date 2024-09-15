@@ -13,9 +13,9 @@ export default function AddCourse() {
           </div>
         </div>
         {/* Course Upload Tips */}
-        <div className="sticky top-10 hidden max-w-[400px] flex-1 rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-6 xl:block">
+        <div className="sticky top-10 hidden max-w-[380px] flex-1 rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-6 md:block">
           <p className="mb-8 text-lg text-richblack-5">⚡ Course Upload Tips</p>
-          <ul className="ml-5 list-item list-disc space-y-4 text-xs text-richblack-5">
+          <ul className="ml-5 list-item list-disc space-y-5 text-xs text-richblack-5">
             <li>Set the Course Price option or make it free.</li>
             <li>Standard size for the course thumbnail is 1024x576.</li>
             <li>Video section controls the course overview video.</li>

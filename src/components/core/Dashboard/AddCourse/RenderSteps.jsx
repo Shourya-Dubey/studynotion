@@ -6,8 +6,9 @@ import CourseInformationForm from "./Courseinformation/CourseInformationForm"
 import PublishCourse from "./PublishCourse"
 
 export default function RenderSteps() {
-  const { step } = useSelector((state) => state.course)
+  let { step } = useSelector((state) => state.course)
   {console.log(step)}
+  step = 1; //add this because of checking , it can't get step  
 
   const steps = [
     {
