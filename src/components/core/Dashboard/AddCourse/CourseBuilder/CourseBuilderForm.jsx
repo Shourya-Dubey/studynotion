@@ -26,7 +26,6 @@ export default function CourseBuilderForm() {
   } = useForm()
 
   const { course } = useSelector((state) => state.course)
-  console.log("here",course)
   const { token } = useSelector((state) => state.auth)
   const [loading, setLoading] = useState(false)
   const [editSectionName, setEditSectionName] = useState(null)
