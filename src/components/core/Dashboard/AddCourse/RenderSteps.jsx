@@ -1,19 +1,12 @@
 import { FaCheck } from "react-icons/fa"
 import { useSelector } from "react-redux"
-import { useState } from "react"
 
 import CourseBuilderForm from "./CourseBuilder/CourseBuilderForm"
 import CourseInformationForm from "./Courseinformation/CourseInformationForm"
 import PublishCourse from "./PublishCourse"
 
 export default function RenderSteps() {
-  // const { step } = useSelector((state) => state.course)
-  // {console.log(step)}
-  // step = 1; //add this because of checking , it can't get step 
-
-  const [step, setStep] = useState(1);
-
-  
+  const { step } = useSelector((state) => state.course)  
 
   const steps = [
     {
@@ -87,8 +80,8 @@ export default function RenderSteps() {
         ))}
       </div>
       {/* Render specific component based on current step */}
-      {step === 1 && <CourseInformationForm setStep={setStep}/>}
-      {step === 2 && <CourseBuilderForm />}
+      {step === 1 && <CourseInformationForm />}
+      {step === 2 && <CourseBuilderForm/>}
       {step === 3 && <PublishCourse />}
     </>
   )

@@ -18,7 +18,7 @@ import ChipInput from "./ChipInput"
 import RequirementsField from "./RequirementField"
 
 
-export default function CourseInformationForm({setStep}) {
+export default function CourseInformationForm() {
   const {
     register,
     handleSubmit,
@@ -32,7 +32,7 @@ export default function CourseInformationForm({setStep}) {
   const { course, editCourse } = useSelector((state) => state.course)
   const [loading, setLoading] = useState(false)
   const [courseCategories, setCourseCategories] = useState([])
-
+  
   useEffect(() => {
     const getCategories = async () => {
       setLoading(true)
@@ -128,8 +128,7 @@ export default function CourseInformationForm({setStep}) {
         const result = await editCourseDetails(formData, token)
         setLoading(false)
         if (result) {
-          // dispatch(setStep(2))
-          setStep((prev)=>prev+1)
+          dispatch(setStep(2))
           dispatch(setCourse(result))
         }
       } else {
@@ -151,8 +150,7 @@ export default function CourseInformationForm({setStep}) {
     setLoading(true)
     const result = await addCourseDetails(formData, token)
     if (result) {
-      // dispatch(setStep(2))
-       setStep((prev)=>prev+1)
+      dispatch(setStep(2))
       dispatch(setCourse(result))
     }
     setLoading(false)

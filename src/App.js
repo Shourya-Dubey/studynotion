@@ -13,11 +13,12 @@ import AddCourse from "./components/core/Dashboard/AddCourse"
 import Cart from "./components/core/Dashboard/Cart"
 import EditCourse from "./components/core/Dashboard/EditCourse"
 import EnrolledCourses from "./components/core/Dashboard/EnrolledCourses"
-// import Instructor from "./components/core/Dashboard/Instructor"
+import Instructor from "./components/core/Dashboard/InstructorDashboard/Instructor"
 import MyCourses from "./components/core/Dashboard/MyCourses"
 import MyProfile from "./components/core/Dashboard/MyProfile"
 import Settings from "./components/core/Dashboard/Settings"
-// import VideoDetails from "./components/core/ViewCourse/VideoDetails"
+import VideoDetails from "./components/core/ViewCourse/VideoDetails"
+import ViewCourse from "./pages/ViewCourse"
 import About from "./pages/About"
 import Catalog from "./pages/Catalog"
 import Contact from "./pages/Contact"
@@ -34,6 +35,9 @@ import VerifyEmail from "./pages/VerifyEmail"
 // import ViewCourse from "./pages/ViewCourse"
 import { getUserDetails } from "./services/operations/ProfileAPI"
 import { ACCOUNT_TYPE } from "./utils/constants"
+
+
+
 
 function App() {
   const dispatch = useDispatch()
@@ -112,7 +116,7 @@ function App() {
           {/* Route only for Instructors */}
           {user?.accountType === ACCOUNT_TYPE.INSTRUCTOR && (
             <>
-              {/* <Route path="dashboard/instructor" element={<Instructor />} /> */}
+              <Route path="dashboard/instructor" element={<Instructor />} />
               <Route path="dashboard/my-courses" element={<MyCourses />} />
               <Route path="dashboard/add-course" element={<AddCourse />} />
               <Route
@@ -135,7 +139,7 @@ function App() {
         </Route>
 
         {/* For the watching course lectures */}
-        {/* <Route
+        <Route
           element={
             <PrivateRoute>
               <ViewCourse />
@@ -150,7 +154,7 @@ function App() {
               />
             </>
           )}
-        </Route> */}
+        </Route>
 
         {/* 404 Page */}
         <Route path="*" element={<Error />} />
