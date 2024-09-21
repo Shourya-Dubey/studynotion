@@ -60,10 +60,10 @@ export default function Catalog() {
   return (
     <>
       {/* Hero Section */}
-      <div className=" box-content bg-richblack-800 px-4">
-        <div className="mx-auto flex min-h-[260px] max-w-maxContentTab flex-col justify-center gap-4 lg:max-w-maxContent ">
+      <div className=" box-content bg-richblack-800 px-10">
+        <div className="mx-auto flex min-h-[240px] max-w-maxContentTab flex-col justify-center gap-4 lg:max-w-maxContent ">
           <p className="text-sm text-richblack-300">
-            {`Home / Catalog / `}
+            {`Catalog / `}
             <span className="text-yellow-25">
               {catalogPageData?.data?.selectedCategory?.name}
             </span>
@@ -78,7 +78,7 @@ export default function Catalog() {
       </div>
 
       {/* Section 1 */}
-      <div className=" mx-auto box-content w-full max-w-maxContentTab px-4 py-12 lg:max-w-maxContent">
+      <div className=" mx-auto box-content w-full max-w-maxContentTab px-10 py-12 lg:max-w-maxContent">
         <div className="section_heading">Courses to get you started</div>
         <div className="my-4 flex border-b border-b-richblack-600 text-sm">
           <p
@@ -109,7 +109,7 @@ export default function Catalog() {
         </div>
       </div>
       {/* Section 2 */}
-      <div className=" mx-auto box-content w-full max-w-maxContentTab px-4 py-12 lg:max-w-maxContent">
+      <div className=" mx-auto box-content w-full max-w-maxContentTab px-10 py-12 lg:max-w-maxContent">
         <div className="section_heading">
           Top courses in {catalogPageData?.data?.differentCategory?.name}
         </div>
@@ -121,7 +121,7 @@ export default function Catalog() {
       </div>
 
       {/* Section 3 */}
-      <div className=" mx-auto box-content w-full max-w-maxContentTab px-4 py-12 lg:max-w-maxContent">
+      <div className=" mx-auto box-content w-full max-w-maxContentTab px-10 py-12 lg:max-w-maxContent">
         <div className="section_heading">Frequently Bought</div>
         <div className="py-8">
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">

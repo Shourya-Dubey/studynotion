@@ -8,7 +8,7 @@ import { useNavigate, useParams } from "react-router-dom"
 import ConfirmationModal from "../components/Common/ConfirmationModal"
 import Footer from "../components/Common/Footer"
 import RatingStars from "../components/Common/RatingStars"
-// import CourseAccordionBar from "../components/core/Course/CourseAccordionBar"
+import CourseAccordionBar from "../components/core/Course/CourseAccordionBar"
 import CourseDetailsCard from "../components/core/Course/CourseDetailsCard"
 import { formatDate } from "../services/formatDate"
 import { fetchCourseDetails } from "../services/operations/courseDetailsAPI"
@@ -126,7 +126,7 @@ function CourseDetails() {
 
   return (
     <>
-      <div className={`relative w-full bg-richblack-800 h-[328px] gap-[24px] pr-[120px] pl-[120px]`}>
+      <div className={`relative w-full bg-richblack-800 h-[350px] gap-[24px] pr-[100px] pl-[100px]`}>
         {/* Hero Section */}
         <div className="mx-auto box-content px-2 lg:w-[1260px] 2xl:relative ">
           <div className="mx-auto grid min-h-[450px] max-w-maxContentTab justify-items-center py-8 lg:mx-0 lg:justify-items-start lg:py-0 xl:max-w-[810px]">
@@ -170,7 +170,7 @@ function CourseDetails() {
               </div>
             </div>
             <div className="flex w-full flex-col gap-4 border-y border-y-richblack-500 py-4 lg:hidden">
-              <p className="space-x-3 pb-4 text-3xl font-semibold text-richblack-5">
+              <p className="space-x-3 pb-4 text-2xl font-semibold text-richblack-5">
                 Rs. {price}
               </p>
               <button className="yellowButton" onClick={handleBuyCourse}>
@@ -180,7 +180,7 @@ function CourseDetails() {
             </div>
           </div>
           {/* Courses Card */}
-          <div className="right-[1rem] top-[60px] mx-auto hidden min-h-[600px] w-1/3 max-w-[410px] translate-y-24 md:translate-y-0 lg:absolute  lg:block">
+          <div className="right-[1.2rem] top-[50px] mx-auto hidden min-h-[600px] w-1/3 max-w-[400px] translate-y-24 md:translate-y-0 lg:absolute lg:block">
             <CourseDetailsCard
               course={response?.data?.courseDetails}
               setConfirmationModal={setConfirmationModal}
@@ -189,10 +189,10 @@ function CourseDetails() {
           </div>
         </div>
       </div>
-      <div className="mx-auto box-content px-4 text-start text-richblack-5 lg:w-[1260px]">
+      <div className="mx-auto box-content px-10 text-start text-richblack-5 lg:w-[1260px]">
         <div className="mx-auto max-w-maxContentTab lg:mx-0 xl:max-w-[810px]">
           {/* What will you learn section */}
-          <div className="my-8 border border-richblack-600 p-8">
+          <div className="my-8 border border-richblack-600 p-6">
             <p className="text-3xl font-semibold">What you'll learn</p>
             <div className="mt-5">
               <ReactMarkdown>{whatYouWillLearn}</ReactMarkdown>
@@ -226,7 +226,7 @@ function CourseDetails() {
 
             {/* uncomment this after adding CourseAccordionBar */}
             {/* Course Details Accordion */}
-            {/* <div className="py-4">
+            <div className="py-4">
               {courseContent?.map((course, index) => (
                 <CourseAccordionBar
                   course={course}
@@ -235,7 +235,7 @@ function CourseDetails() {
                   handleActive={handleActive}
                 />
               ))}
-            </div> */}
+            </div>
 
             {/* Author Details */}
             <div className="mb-12 py-4">

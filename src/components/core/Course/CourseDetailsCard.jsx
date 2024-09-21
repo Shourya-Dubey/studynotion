@@ -67,7 +67,7 @@ function CourseDetailsCard({ course, setConfirmationModal, handleBuyCourse }) {
         />
 
         <div className="px-4">
-          <div className="space-x-3 pb-4 text-3xl font-semibold">
+          <div className="space-x-3 pb-4 text-2xl font-semibold">
             Rs. {CurrentPrice}
           </div>
           <div className="flex flex-col gap-4">
