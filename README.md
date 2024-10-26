@@ -1,3 +1,6 @@
+
+<img width="953" alt="studyNotion" src="https://github.com/user-attachments/assets/91eae811-5c5b-43f3-b186-81c4e1884f2c">
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
